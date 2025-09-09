@@ -162,7 +162,7 @@ def prediction_page(predictor):
                         }
                     ))
                     fig.update_layout(height=300)
-                    st.plotly_chart(fig, width='stretch')
+                    st.plotly_chart(fig, use_container_width=True)
 
                     # Interpretation
                     if prediction >= 75:
@@ -179,7 +179,7 @@ def prediction_page(predictor):
         st.subheader("📋 Input Summary")
         summary_df = pd.DataFrame([input_data]).T
         summary_df.columns = ['Value']
-        st.dataframe(summary_df, width='stretch')
+        st.dataframe(summary_df, use_container_width=True)
 
         # Show feature importance if available
         # if predictor.model is not None:
@@ -191,7 +191,7 @@ def prediction_page(predictor):
         #                      orientation='h',
         #                      title="Top 5 Most Important Features")
         #         fig.update_layout(height=300)
-        #         st.plotly_chart(fig, width='stretch')
+        #         st.plotly_chart(fig, use_container_width=True)
 
 def about_page():
     """About page with application information"""

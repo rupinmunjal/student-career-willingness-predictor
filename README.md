@@ -83,6 +83,7 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 student-career-willingness/
 ├── app.py                          # Main Streamlit app
 ├── pyproject.toml                  # Dependencies & project metadata
+├── requirements.txt                
 ├── uv.lock                         # Dependency lock file
 ├── data/                           # Dataset(s)
 │   └── Student Attitude and Behavior.csv
